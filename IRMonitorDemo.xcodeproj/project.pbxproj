@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B143A22F4EA1E62005030327 /* libPods-IRMonitorDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD32E70DDDC31AC24D1023E4 /* libPods-IRMonitorDemo.a */; };
 		F74E732A1F4AC4DB00C46C86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E73291F4AC4DB00C46C86 /* main.m */; };
 		F74E732D1F4AC4DB00C46C86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E732C1F4AC4DB00C46C86 /* AppDelegate.m */; };
 		F74E73301F4AC4DB00C46C86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74E732F1F4AC4DB00C46C86 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A31F0A4171A49B9DBF21A3D /* Pods-IRMonitorDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRMonitorDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRMonitorDemo/Pods-IRMonitorDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9008C7E549B8887D126EC5D2 /* Pods-IRMonitorDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRMonitorDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRMonitorDemo/Pods-IRMonitorDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BD32E70DDDC31AC24D1023E4 /* libPods-IRMonitorDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IRMonitorDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74E73251F4AC4DB00C46C86 /* IRMonitorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRMonitorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74E73291F4AC4DB00C46C86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F74E732B1F4AC4DB00C46C86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B143A22F4EA1E62005030327 /* libPods-IRMonitorDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00E264342CB1BA05902BDAB5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9008C7E549B8887D126EC5D2 /* Pods-IRMonitorDemo.debug.xcconfig */,
+				5A31F0A4171A49B9DBF21A3D /* Pods-IRMonitorDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		73F347A6F8D6C12C4E7B657A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD32E70DDDC31AC24D1023E4 /* libPods-IRMonitorDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F74E731C1F4AC4DB00C46C86 = {
 			isa = PBXGroup;
 			children = (
 				F74E73271F4AC4DB00C46C86 /* IRMonitorDemo */,
 				F74E73261F4AC4DB00C46C86 /* Products */,
+				00E264342CB1BA05902BDAB5 /* Pods */,
+				73F347A6F8D6C12C4E7B657A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F74E733C1F4AC4DB00C46C86 /* Build configuration list for PBXNativeTarget "IRMonitorDemo" */;
 			buildPhases = (
+				B9C8375965CFBFF0CA4B7C78 /* [CP] Check Pods Manifest.lock */,
 				F74E73211F4AC4DB00C46C86 /* Sources */,
 				F74E73221F4AC4DB00C46C86 /* Frameworks */,
 				F74E73231F4AC4DB00C46C86 /* Resources */,
+				21AF2109A18C233B6B22E4EC /* [CP] Embed Pods Frameworks */,
+				FFC108434D5E7D57840FA05A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21AF2109A18C233B6B22E4EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRMonitorDemo/Pods-IRMonitorDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9C8375965CFBFF0CA4B7C78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FFC108434D5E7D57840FA05A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRMonitorDemo/Pods-IRMonitorDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F74E73211F4AC4DB00C46C86 /* Sources */ = {
@@ -271,6 +346,7 @@
 		};
 		F74E733D1F4AC4DB00C46C86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9008C7E549B8887D126EC5D2 /* Pods-IRMonitorDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 57D4T2G5AY;
@@ -283,6 +359,7 @@
 		};
 		F74E733E1F4AC4DB00C46C86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A31F0A4171A49B9DBF21A3D /* Pods-IRMonitorDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 57D4T2G5AY;
